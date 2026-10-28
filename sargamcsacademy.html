@@ -9,6 +9,7 @@
 <meta property="og:title" content="SarGam CS Academy | Computer Science, AI & Machine Learning">
 <meta property="og:description" content="Learn Computer Science. Build with AI. Shape the Future.">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://example.com/"><!-- TODO: replace with your real site URL -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -36,6 +37,9 @@ nav ul a.on{border-color:var(--amber);color:var(--amber)}
 #prog{position:fixed;top:0;left:0;height:3px;background:var(--amber);width:0;z-index:60}
 @media(max-width:980px){#burger{display:block}nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--dark);flex-direction:column;padding:18px;border-bottom:1px solid var(--line)}nav ul.open{display:flex}}
 /* hero */
+.demo-banner{display:inline-flex;align-items:center;gap:9px;margin:0 0 18px;padding:9px 15px;border:1px solid #2EC4B688;border-radius:999px;background:#2EC4B615;color:#d7fff7;font-size:.9rem;font-weight:700;box-shadow:0 6px 22px #2EC4B61c}
+.demo-banner strong{color:var(--teal);letter-spacing:.04em}
+.demo-banner .demo-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px #2EC4B622}
 .hero{padding:130px 0 70px;background:radial-gradient(60% 60% at 80% 20%,rgba(245,181,68,.16),transparent),var(--dark)}
 .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}@media(max-width:900px){.grid2{grid-template-columns:1fr}}
 .eyebrow{color:var(--amber);font-weight:700;letter-spacing:.08em;font-size:.82rem;margin-bottom:14px}
@@ -147,15 +151,17 @@ footer b{color:var(--amber);display:block;margin-bottom:6px;font-family:var(--d)
 <ul id="menu">
 <li><a href="#home">Home</a></li><li><a href="#classes">Explore Classes</a></li><li><a href="#ai">AI &amp; ML</a></li><li><a href="#roadmap">Roadmap</a></li><li><a href="#workshop">Free Workshop</a></li><li><a href="#contact">Contact</a></li>
 <li><a class="btn pri" style="padding:8px 16px;font-size:.88rem" href="#workshop">Register for Free Workshop</a></li>
+<li><a class="btn" style="padding:8px 16px;font-size:.88rem;border-color:var(--teal);color:var(--cream)" href="#contact" data-form="class">Register for Classes</a></li>
 </ul></nav></div></header>
 
 <main id="main">
 <section class="hero" id="home"><div class="wrap grid2">
 <div>
 <p class="eyebrow">COMPUTER SCIENCE • AI • FUTURE-READY LEARNING</p>
+<p class="demo-banner"><span class="demo-dot" aria-hidden="true"></span><strong>FREE DEMO CLASS</strong> Your first class is free — experience our teaching before enrolling.</p>
 <h1>From Computer Science Fundamentals to the World of AI.</h1>
 <p class="lead">Explore Computer Science, strengthen your mathematical thinking, develop logical reasoning, and discover Artificial Intelligence and Machine Learning through practical, beginner-friendly learning experiences.</p>
-<div class="row"><a class="btn pri" href="#classes">Explore Classes</a><a class="btn" href="#workshop">Join Free AI Workshop</a></div>
+<div class="row"><a class="btn pri" href="#classes">Explore Classes</a><a class="btn" href="#contact" data-form="class">Register for Classes</a><a class="btn" href="#workshop">Join Free AI Workshop</a></div>
 <div class="tags"><span>Classes 6–12</span><span>Beginner-friendly AI</span><span>Programming &amp; problem-solving</span><span>All age groups</span></div>
 </div>
 <div class="hv"><svg class="net" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><g><line x1="20" y1="40" x2="150" y2="20"/><line x1="20" y1="40" x2="150" y2="150"/><line x1="20" y1="260" x2="150" y2="150"/><line x1="20" y1="260" x2="150" y2="280"/><line x1="150" y1="20" x2="290" y2="90"/><line x1="150" y1="150" x2="290" y2="90"/><line x1="150" y1="150" x2="290" y2="220"/><line x1="150" y1="280" x2="290" y2="220"/><line x1="290" y1="90" x2="380" y2="150"/><line x1="290" y1="220" x2="380" y2="150"/></g><circle cx="20" cy="40" r="5"/><circle cx="20" cy="260" r="5"/><circle cx="150" cy="20" r="6"/><circle cx="150" cy="150" r="6"/><circle cx="150" cy="280" r="6"/><circle cx="290" cy="90" r="6"/><circle cx="290" cy="220" r="6"/><circle cx="380" cy="150" r="7"/></svg>
@@ -192,7 +198,7 @@ footer b{color:var(--amber);display:block;margin-bottom:6px;font-family:var(--d)
 </div></div></section>
 
 <section class="light" id="classes"><div class="wrap">
-<h2>Explore Classes 6 to 12</h2><p class="sub muted">Pick a stage to see the themes we work on. Actual content depends on the learner's class and board.</p>
+<h2>Explore Classes 6 to 12</h2><p class="sub muted">Pick a stage to see the themes we work on. Actual content depends on the learner's class and board. <strong>New students can attend their first class as a free demo before deciding to enrol.</strong></p>
 <div class="filters" role="group" aria-label="Filter classes">
 <button data-f="all" aria-pressed="true">All Classes</button><button data-f="f" aria-pressed="false">Foundation: 6–8</button><button data-f="s" aria-pressed="false">Secondary: 9–10</button><button data-f="ss" aria-pressed="false">Senior Secondary: 11–12</button></div>
 <div class="car" id="clsCar" aria-roledescription="carousel" aria-label="Classes"><div class="track c3" tabindex="0" id="clsTrack"></div><div class="ctl"></div></div>
@@ -240,7 +246,7 @@ footer b{color:var(--amber);display:block;margin-bottom:6px;font-family:var(--d)
 <section id="faq"><div class="wrap"><h2>Frequently asked questions</h2><div id="faqList" style="margin-top:20px"></div></div></section>
 
 <section class="light" id="contact"><div class="wrap grid2">
-<div><h2>Contact &amp; Enquiry</h2><p class="muted sub">Call or message us about courses or the free workshop.</p>
+<div><h2>Contact &amp; Enquiry</h2><p class="muted sub">Call or message us about courses or the free workshop. Your first class can be a free demo session.</p>
 <div class="row"><a class="btn pri" href="tel:+918585023345">Call 8585023345</a><a class="btn" href="https://wa.me/918585023345" target="_blank" rel="noopener">WhatsApp</a></div>
 <p style="margin-top:14px"><b>Email:</b> <a href="mailto:sargamcsacademy@gmail.com">sargamcsacademy@gmail.com</a></p>
 <h3 style="margin-top:26px">Register online</h3><div class="row"><a class="btn pri" href="#contact" data-form="class">Class registration form</a><a class="btn" href="#workshop" data-form="workshop">Free workshop registration</a></div>
@@ -258,8 +264,8 @@ footer b{color:var(--amber);display:block;margin-bottom:6px;font-family:var(--d)
 <dialog id="dlg" aria-labelledby="dt"><div class="dh"><button id="dx" aria-label="Close">✕</button><h2 id="dt"></h2><p id="ds"></p></div><div class="db" id="dbody"></div></dialog>
 <script>
 /* ===== CONFIG ===== */
-const WORKSHOP_GOOGLE_FORM_URL = ""; // Free workshop registration: paste your real Google Form link
-const CLASS_GOOGLE_FORM_URL = "";    // Class / course registration: paste your real Google Form link
+const WORKSHOP_GOOGLE_FORM_URL = "https://forms.gle/39hU9VEAGkuSMkwz7"; // Free workshop registration: paste your real Google Form link
+const CLASS_GOOGLE_FORM_URL = "https://forms.gle/EVxMPnQQFQ99hTft8";    // Class / course registration: paste your real Google Form link
 const CLASS_FORM_ENTRY_ID = "";      // Optional prefill, e.g. "entry.123456789" (from "Get pre-filled link" in Google Forms)
 const WHATSAPP_NUMBER = "918585023345";
 const START = new Date("2026-10-31T20:00:00+05:30"), END = new Date("2026-10-31T21:00:00+05:30"); // IST
@@ -390,7 +396,7 @@ document.addEventListener("click", e => {
   const a = e.target.closest("[data-form],[data-cls]"); if (!a) return;
   if (a.dataset.form === "workshop") { e.preventDefault(); if (!WORKSHOP_GOOGLE_FORM_URL) { $("#contact").scrollIntoView(); } openForm(WORKSHOP_GOOGLE_FORM_URL, "Workshop registration"); return; }
   if (a.dataset.form === "class" || a.dataset.cls) {
-    if (!CLASS_GOOGLE_FORM_URL) { if (a.dataset.form) e.preventDefault(), openForm("", "Class registration"); return; } /* data-cls falls back to the enquiry form */
+    if (!CLASS_GOOGLE_FORM_URL) { if (a.dataset.form) { e.preventDefault(); openForm("", "Class registration"); $("#contact").scrollIntoView({behavior:"smooth"}); } return; } /* data-cls falls back to the enquiry form */
     e.preventDefault(); if (dlg.open) dlg.close(); openForm(CLASS_GOOGLE_FORM_URL, "Class registration", a.dataset.cls);
   }
 });
